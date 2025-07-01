@@ -1,0 +1,135 @@
+import { useState } from 'react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for your message. I'll get back to you soon!",
+    });
+
+    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(false);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const contactInfo = [
+    {
+      icon: <Mail className="h-6 w-6" />,
+      label: "Email",
+      value: "saikrishnauggi@gmail.com",
+      href: "mailto:saikrishnauggi@gmail.com?subject=Let's%20Connect&body=Hi%20Sai%2C%0A%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you.%0A%0ARegards%2C"
+    },
+    {
+      icon: <Phone className="h-6 w-6" />,
+      label: "Phone",
+      value: "+91 93980 36854",
+      href: "tel:+919398036854"
+    },
+    {
+      icon: <MapPin className="h-6 w-6" />,
+      label: "Location",
+      value: "Hyderabad, India",
+      href: "#"
+    }
+  ];
+
+  return (
+    <section id="contact" className="py-20 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyber-pink to-cyber-blue bg-clip-text text-transparent">
+            Get In Touch
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-cyber-pink to-cyber-blue mx-auto"></div>
+          <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
+            Have a project in mind or want to collaborate? I'd love to hear from you!
+          </p>
+        </div>
+
+        {/* Centered Contact Card */}
+        <div className="flex justify-center">
+          <div className="glass-card p-8 w-full max-w-3xl mx-auto">
+            <h3 className="text-2xl font-semibold text-white mb-6">
+              Let's Connect
+            </h3>
+            <p className="text-muted-foreground mb-8">
+              I'm always open to discussing new opportunities, innovative projects, 
+              or just having a conversation about technology and AI.
+            </p>
+
+            <div className="space-y-6">
+              {contactInfo.map((info, index) => (
+                <div key={index} className="flex items-center group">
+                  <div className="p-3 glass-card mr-4 group-hover:scale-110 transition-transform text-cyber-blue">
+                    {info.icon}
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">{info.label}</p>
+                    <a 
+                      href={info.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-cyber-blue transition-colors underline"
+                    >
+                      {info.value}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 pt-8 border-t border-white/10">
+              <p className="text-muted-foreground mb-4">Follow me on:</p>
+              <div className="flex space-x-4">
+                <a 
+                  href="https://github.com/saikrishnauggi" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 glass-card hover:scale-110 transition-all duration-300 cyber-glow group"
+                >
+                  <Github className="h-6 w-6 text-cyber-blue group-hover:text-white" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/sai-krishna-uggi-30037525a/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 glass-card hover:scale-110 transition-all duration-300 cyber-glow group"
+                >
+                  <Linkedin className="h-6 w-6 text-cyber-blue group-hover:text-white" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
