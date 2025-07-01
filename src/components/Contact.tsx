@@ -64,7 +64,7 @@ const Contact = () => {
       icon: <Mail className="h-6 w-6" />,
       label: "Email",
       value: "saikrishnauggi@gmail.com",
-      href: "mailto:saikrishnauggi@gmail.com?subject=Hello%20Sai&body=Hi%20Sai%2C%0AI%20would%20like%20to%20connect%20with%20you."
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=saikrishnauggi@gmail.com"
     },
     {
       icon: <Phone className="h-6 w-6" />,
