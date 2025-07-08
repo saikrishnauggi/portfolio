@@ -68,7 +68,7 @@ const Footer = () => {
                   saikrishnauggi@gmail.com
                 </a>
                 <a 
-                  href="https://linkedin.com/in/sai-krishna-uggi" 
+                  href="https://www.linkedin.com/in/sai-krishna-uggi-30037525a/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block text-muted-foreground hover:text-cyber-blue transition-colors"
