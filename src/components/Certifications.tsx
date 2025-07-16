@@ -33,7 +33,34 @@ const Certifications = () => {
       description: "Foundational knowledge in AI concepts and practical applications",
       type: "Internship",
       link: "https://drive.google.com/file/d/1ZWiFzUN-EYprVNqvfrv4xrq2uvKb8siY/view?usp=drive_link"
-    }
+    },
+    {
+  title: "Artificial Intelligence Internship",
+  issuer: "Talent Trek E-Learning",
+  date: "April 2025 – July 2025",
+  description: "Successfully completed a 3-month AI internship program with hands-on training in machine learning, predictive analytics, and real-time project execution using Python, TensorFlow, and scikit-learn.",
+  type: "Internship Certificate",
+  link: "https://drive.google.com/file/d/1eHNlmzYEYhSpCFfSdEkgYfWGGS3pvYJ4/view?usp=sharing"
+},
+    {
+  title: "Certificate of Excellence – AI Internship",
+  issuer: "Talent Trek E-Learning",
+  date: "July 2025",
+  description: "Awarded for outstanding results, professional conduct, and exceptional application of AI skills and standards during the internship program.",
+  type: "Achievement Certificate",
+  link: "https://drive.google.com/file/d/1oYyjvi_AcVW8tf-q6mzO6g9TzTK0Swfk/view?usp=drive_link"
+},
+    {
+  title: "Internship Experience Letter – AI",
+  issuer: "Talent Trek E-Learning",
+  date: "July 2025",
+  description: "Recognized for active contribution and professionalism during the AI internship program. Demonstrated effective problem-solving and teamwork throughout the training.",
+  type: "Experience Letter",
+  link: "https://drive.google.com/file/d/1L2GD5SN93mzrWba0iVqw7oEOUhvx4-p-/view?usp=sharing"
+}
+
+
+
   ];
 
   const getTypeColor = (type: string) => {
