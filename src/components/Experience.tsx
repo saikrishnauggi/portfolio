@@ -19,6 +19,21 @@ const Experience = () => {
       technologies: ["Azure", "Neural Networks", "Python", "AI/ML", "Cloud Computing"]
     },
     {
+  company: "Talent Trek E-Learning",
+  position: "Artificial Intelligence Intern",
+  duration: "April 2025 – July 2025",
+  location: "Remote",
+  type: "Internship",
+  highlights: [
+    "Successfully completed a 3-month AI internship with real-time projects",
+    "Gained hands-on experience in machine learning and predictive analytics",
+    "Worked on data-driven decision-making projects using Python and ML libraries",
+    "Utilized tools like TensorFlow, Scikit-learn, and NumPy for model development",
+    "Awarded Certificate of Excellence for outstanding performance"
+  ],
+  technologies: ["Python", "TensorFlow", "Scikit-learn", "NumPy", "Machine Learning", "AI"]
+},
+    {
       company: "Saiket Systems",
       position: "Software Development Intern",
       duration: "May 2024",
