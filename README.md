@@ -65,8 +65,7 @@ This project was manually developed using:
 
 You can deploy this project using platforms like:
 
-* **Vercel**
-* **Netlify**
+* **Vercel** - I personally used and also Mail integration using **Formspree**
 * **GitHub Pages**
 * Or any other hosting provider that supports static websites or Node.js apps
 
