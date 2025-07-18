@@ -69,6 +69,8 @@ You can deploy this project using platforms like:
 * **GitHub Pages**
 * Or any other hosting provider that supports static websites or Node.js apps
 
+* **View** my portfolio - https://portfolio-mu-kohl-45.vercel.app
+
 Follow their respective guides for setting up a deployment pipeline from GitHub.
 
 ---
